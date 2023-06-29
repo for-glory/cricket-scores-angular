@@ -27,3 +27,18 @@
   border-style: solid;
   border-color: black;
 }
+
+@media screen and (max-width: 899px) {
+  .country, .average {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .country, .average {
+    width: 300px;
+  }
+  .horiz-bar {
+    clear: both;
+  }
+}
