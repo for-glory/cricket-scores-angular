@@ -1,0 +1,11 @@
+<form>
+  Source of data: 
+  <input id="src-test" type="radio" 
+         name="data-source" value="test" checked
+         (click)="selectTestData()">  
+  <label for="src-local">Test Data</label>
+  <input id="src-server" type="radio" 
+         name="data-source" value="server"
+         (click)="selectServerData()">  
+  <label for="src-server">Server Data</label>
+</form>
