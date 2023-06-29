@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="country">
+    <form>
+      The Country: <input #countryInput class="country-input" 
+                          type="text" (input)="search(countryInput.value)" />
+    </form>
+  </div>
+  <div class="average">
+    The Average: <ng-container *ngIf="score$ | async; let score else scoreNotAvailable">{{ score }}</ng-container>
+    <ng-template #scoreNotAvailable>-</ng-template>
+  </div>
+  <div class="horiz-bar" [ngStyle]="{'width.px': score * 2}" *ngIf="score$ | async; let score">&nbsp;</div>
+</div>
